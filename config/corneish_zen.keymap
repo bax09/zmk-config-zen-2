@@ -36,16 +36,16 @@
             display-name = "QWERTY";
 
             // --------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | PSCRN |
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | ESC  |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   | 
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | PSCRN|
             //                    | LALT | LWR | SPC |   | ENT | RSE  | BACKSPACE |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T          &kp Y        &kp U  &kp I      &kp O    &kp P     &kp PSCRN
+&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T          &kp Y        &kp U  &kp I      &kp O    &kp P     &kp ESC
 &kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G          &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&td0       &kp Z  &kp X  &kp C     &kp V  &kp B          &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LALT  &mo 1  &lt 3 SPACE    &lt 3 ENTER  &mo 2  &kp BSPC
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B          &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp PSCRN
+                         &kp LALT  &mo 1  &kp SPACE    &lt 3 ENTER    &mo 2  &kp BSPC
             >;
         };
 
@@ -53,10 +53,10 @@
             display-name = "NUMBER";
 
             // -----------------------------------------------------------------------------------------
-            // |  TAB |     |  UP |     |     |     |   |  7 |  8 |  9 |  9  |  0  | BKSP |
+            // |  TAB |     |  UP |     |     |     |   |  7 |  8 |  9 |  9  |     |      |
             // | BTCLR| LFT | DWN | RGT |     |     |   |  4 |  5 |  6 |     |     |      |
             // | SHFT |BTCLR| BT1 | BT2 | BT3 | BT4 |   |  1 |  2 |  3 |     |     |      |
-            //                    | GUI |     | SPC |   |  0 |    | ALT|
+            //                    |     |     | SPC |   |  0 |    |    |
 
             bindings = <
 &trans  &trans           &kp UP          &trans             &trans            &trans             &kp N7           &kp N8           &kp N9           &trans           &trans    &kp BSPC
@@ -86,10 +86,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4      &kp F5         &kp F6       &kp F7  &kp F8  &kp F9  &kp F10          &kp F11
-&trans  &trans  &trans  &trans  &sys_reset  &bootloader    &bootloader  &trans  &trans  &trans  &kp PRINTSCREEN  &kp F12
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &ext_power EP_OFF  &ext_power EP_ON  &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                        &trans  &trans      &trans         &trans       &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4      &kp F5             &kp F6            &kp F7  &kp F8    &kp F9           &kp F10          &kp F11
+&trans  &trans  &trans  &trans  &sys_reset  &bootloader        &bootloader       &trans  &trans    &trans           &kp PRINTSCREEN  &kp F12
+&trans  &rgb_ug RGB_OFF &rgb_ug RGB_ON      &ext_power EP_OFF  &ext_power EP_ON  &rgb_ug RGB_EFF   &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &kp RGB_BRI  &kp RGB_BRD
+                        &trans  &trans      &trans             &trans            &trans  &trans
             >;
         };
     };
