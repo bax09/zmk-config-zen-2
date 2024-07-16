@@ -101,5 +101,6 @@
                 &trans    &kp A      &kp S            &kp D      &kp F          &kp G          &kp H        &kp Z       &kp X       &kp C     &kp V      &tog NAVI
                                      &kp LALT         &kp LCTRL  &trans         &trans         &trans       &trans
             >;
+        };
     };
 };
