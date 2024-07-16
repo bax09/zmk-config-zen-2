@@ -38,13 +38,13 @@
             // --------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | ESC  |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   | 
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | PSCRN|
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | TOGL |
             //                    |LALT | LWR | SPC |   | ENT | RSE  | BACKSPACE |
 
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T          &kp Y        &kp U  &kp I      &kp O    &kp P     &kp ESC
 &kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G          &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B          &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp PSCRN
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B          &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &tog NAVI
                          &kp LALT  &mo 1  &kp SPACE      &lt 3 ENTER  &mo 2  &kp BSPC
             >;
         };
@@ -53,16 +53,16 @@
             display-name = "NUMBER";
 
             // -----------------------------------------------------------------------------------------
-            // |  TAB  |     |  UP |     |     |     |   |  7 |  8 |  9 |     |      | DEL  |
-            // | BTCLR | LFT | DWN | RGT |     |     |   |  4 |  5 |  6 |     | HOME | PGUP |
-            // | SHFT  |BTCLR| BT1 | BT2 | BT3 | BT4 |   |  1 |  2 |  3 |     | END  | PGDN |
-            //                     |     |     | SPC |   |  0 |    |    |
+            // |  TAB  |  7  |  8 |  9 |     |      |      |    |     |     | UP  |      | DEL  |
+            // | CTRL  |  4  |  5 |  6 |     |      |      |    | LFT | LFT | DWN | RGT  | PGUP |
+            // | SHFT  |  1  |  2 |  3 |  0  |      | BTCLR| BT1| BT2 | BT3 | BT4 |      | PGDN |
+            //                    |    | SPC |      |      |    |     |     |
 
             bindings = <
-&trans  &trans           &kp UP          &trans             &trans            &trans             &kp N7           &kp N8           &kp N9           &trans           &trans    &kp DEL
-&trans  &kp LEFT         &kp DOWN        &kp RIGHT          &trans            &trans             &kp N4           &kp N5           &kp N6           &trans           &kp HOME  &kp PG_UP
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3       &kp N1           &kp N2           &kp N3           &trans           &kp END   &kp PG_DN
-                                         &trans             &trans            &trans             &kp N0           &trans           &trans
+&trans  &kp N7           &kp N8          &kp N9             &trans            &trans             &trans            &trans           &trans           &kp UP           &trans     &kp DEL
+&trans  &kp N4           &kp N5          &kp N6             &trans            &trans             &trans            &trans           &kp LEFT         &kp DOWN         &kp RIGHT  &kp PG_UP
+&trans  &kp N1           &kp N2          &kp N3             &kp N0            &bt BT_CLR_ALL     &bt BT_SEL 0      &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &trans     &kp PG_DN
+                                         &trans             &trans            &trans             &trans            &trans           &trans
             >;
         };
 
@@ -92,5 +92,14 @@
                         &trans  &trans      &trans             &trans            &trans  &trans
             >;
         };
+
+        nav_layer {
+            display-name = "GAME";
+            bindings = <
+                &trans    &kp N1     &kp N2           &kp N3     &kp N4         &kp N5         &kp N6       &kp N7      &kp N8      &kp N9    &kp N0     &kp ESC
+                &trans    &kp Q      &kp W            &kp E      &kp R          &kp T          &kp Y        &kp J       &kp K       &kp L     &kp B      &trans
+                &trans    &kp A      &kp S            &kp D      &kp F          &kp G          &kp H        &kp Z       &kp X       &kp C     &kp V      &tog NAVI
+                                     &kp LALT         &kp LCTRL  &trans         &trans         &trans       &trans
+            >;
     };
 };
